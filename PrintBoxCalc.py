@@ -38,9 +38,11 @@ print(f"| {res1} | {res2} | {res3} | {res4} |\n")
 
 
 sino = input("¿Quieres calcular altura? s/n: ")
-if sino == "s":
+if sino.lower() == "s":
     nume1 = float(input("\nIntroduce el primer número: "))
     nume2 = float(input("Introduce el segundo: "))
     nume3 = float(input("Introduce el tercero: "))
     resulaltura = ((nume1 / 2) + (nume3 / 2)) + nume2
     print(f"\nResultado altura: {resulaltura}")
+else:
+    print("Calculo de altura omitido")

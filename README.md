@@ -8,10 +8,9 @@
 
 ### 🛠️ Descripción del Proyecto
 
-**PrintBoxCalc** es actualmente un concepto inicial desarrollado como un script funcional, pensado como base para una futura aplicación más robusta.  
+**PrintBoxCalc** es actualmente un concepto inicial desarrollado como un script funcional, pensado como base para una futura aplicación más robusta y entendible.
 Este proyecto estará orientado a sistemas **Android** y **Windows**, y su propósito principal es facilitar y automatizar cálculos relacionados con maquinaria industrial, en particular con máquinas tipo **Apstar HGL-924**.
-
-La idea es crear un software funcional, sencillo de usar y entender para realizar ajustes con respecto a las impresiones en máquinas **Apstar HGL-924** obviamente actualmente no es nada más que un simple script cuyo funcionamiento e interpretación yo entiendo perfectamente pero que para otras personas puede ser complejo de usar o comprender, más adelante crearé una interfaz gráfica tanto para sistemas **Android** como para sistemas **Windows** que sea entendible por operarios y oficiales sin conocimientos informáticos previos pero que trabajen con esta máquina en concreto e incluso pueda ser aplicable a otras máquinas similares.
+Como actualmente es solo un concepto inicial su uso y comprensión a mi no me resulta ningún inconveniente pero sé que para otras personas sí, por ello trabajaré durante un tiempo en diseñar una amigable interfaz gráfica para su uso por cualquier tipo de operario u oficial que trabaje con este tipo de maquinaria.
 
 ---
 

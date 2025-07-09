@@ -1,4 +1,4 @@
-<h1 align="center"> PrintBoxCalc </h1>
+<h1 align="center"> 📦 PrintBoxCalc 📦 </h1>
 
 <p align="center">
   <img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3bGRhZjMyZXg0azhmb3RuZG9iaGtheTg2cWRzc29lYWhpNGtic3pueCZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/c0xcPudJy1JDy/giphy.gif" width="500"/>

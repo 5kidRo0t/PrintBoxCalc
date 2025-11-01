@@ -4,6 +4,15 @@
   <img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3bGRhZjMyZXg0azhmb3RuZG9iaGtheTg2cWRzc29lYWhpNGtic3pueCZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/c0xcPudJy1JDy/giphy.gif" width="350"/>
 </p>
 
+### 🛠️ ¿Cómo instalar?
+
+Puedes instalar la app descargando solo el archivo **Printboxcalc.zip**, y una vez descargado
+lo descomprimes con **RAR** por ejemplo,y obtendrás un **.apk**, simplemente ábrelo e instálalo.
+
+En caso de querer compilar tú mismx la app puedes hacerlo usando **Briefcase** o lo que prefieras, tienes ahí todos los
+recursos para que compiles la app, la modifiques o hagas lo que quieras bajo los términos de la **licencia GPL 3.0**, el código principal lo encontrarás
+en **/src/printboxcalc/** con el nombre de **__main__.py**
+
 ---
 
 ### 🛠️ Descripción del Proyecto

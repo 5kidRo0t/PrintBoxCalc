@@ -16,40 +16,55 @@
 
 import toga
 from toga.style import Pack
-from toga.style.pack import COLUMN
+from toga.style.pack import COLUMN, ROW
 
 
 class PrintBoxCalc(toga.App):
     def startup(self):
-        main_box = toga.Box(style=Pack(direction=COLUMN, padding=10))
+        main_box = toga.Box(style=Pack(direction=COLUMN, padding=10, flex=1))
 
-        # Entradas principales
-        self.num1 = toga.TextInput(placeholder='Ancho 1', style=Pack(padding=5))
-        self.num2 = toga.TextInput(placeholder='Largo 1', style=Pack(padding=5))
-        self.num3 = toga.TextInput(placeholder='Ancho 2', style=Pack(padding=5))
-        self.num4 = toga.TextInput(placeholder='Largo 2', style=Pack(padding=5))
+        label_style = Pack(
+            width=100,
+            padding_right=10,
+            font_size=14,
+            font_weight='bold',
+            color='#333333'
+        )
 
-        # Botón principal
+        fila1 = toga.Box(style=Pack(direction=ROW, padding=5))
+        fila1.add(toga.Label('Ancho 1:', style=label_style))
+        self.num1 = toga.NumberInput(style=Pack(flex=1))
+        fila1.add(self.num1)
+
+        fila2 = toga.Box(style=Pack(direction=ROW, padding=5))
+        fila2.add(toga.Label('Largo 1:', style=label_style))
+        self.num2 = toga.NumberInput(style=Pack(flex=1))
+        fila2.add(self.num2)
+
+        fila3 = toga.Box(style=Pack(direction=ROW, padding=5))
+        fila3.add(toga.Label('Ancho 2:', style=label_style))
+        self.num3 = toga.NumberInput(style=Pack(flex=1))
+        fila3.add(self.num3)
+
+        fila4 = toga.Box(style=Pack(direction=ROW, padding=5))
+        fila4.add(toga.Label('Largo 2:', style=label_style))
+        self.num4 = toga.NumberInput(style=Pack(flex=1))
+        fila4.add(self.num4)
+
         calc_button = toga.Button(
             'Calcular',
             on_press=self.calcular,
             style=Pack(padding=10)
         )
 
-        # Etiqueta de resultados
         self.result_label = toga.Label(
             'Resultados:',
             style=Pack(padding=10, font_size=15, font_weight='bold', color='black')
         )
 
-        # Añadir widgets al layout principal
-        for widget in [
-            self.num1, self.num2, self.num3, self.num4,
-            calc_button, self.result_label
-        ]:
-            main_box.add(widget)
+        for fila in [fila1, fila2, fila3, fila4, calc_button, self.result_label]:
+            main_box.add(fila)
 
-        # Ventana principal
         self.main_window = toga.MainWindow(title=self.formal_name)
         self.main_window.content = main_box
         self.main_window.show()
@@ -62,7 +77,6 @@ class PrintBoxCalc(toga.App):
             num3 = float(self.num3.value)
             num4 = float(self.num4.value)
 
-            # Cálculos de clichés
             res1 = (num1 / 2) + num2
             res2 = num2 / 2
             res3 = num3 / 2
@@ -81,3 +95,4 @@ def main():
 
 if __name__ == "__main__":
     main().main_loop()
+

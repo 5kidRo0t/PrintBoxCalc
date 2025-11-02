@@ -1,7 +1,7 @@
-<h1 align="center">📦 PrintBoxCalc 📦</h1>
+<h1 align="center">PrintBoxCalc Ver. 1.1.0 📦</h1>
 
 <p align="center">
-  <img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3bGRhZjMyZXg0azhmb3RuZG9iaGtheTg2cWRzc29lYWhpNGtic3pueCZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/c0xcPudJy1JDy/giphy.gif" width="350"/>
+  <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdTNtZ21obXV1ZW93Mm1zZjQ5ZWFhYmkwcDRqZTh3MnU3aGRnYmNiZiZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/fxq8W3zBO7l0YcAgUQ/giphy.gif" width="350"/>
 </p>
 
 ### 🛠️ ¿Cómo instalar?
@@ -17,10 +17,7 @@ en **/src/printboxcalc/** con el nombre de **__main__.py**
 
 ### 🛠️ Descripción del Proyecto
 
-**PrintBoxCalc** es actualmente un concepto inicial desarrollado como un script funcional, pensado como base para una futura aplicación más robusta y entendible.
-Este proyecto estará orientado a sistemas **Android** y **""se ha descartado la versión para windows para centrar el trabajo en Android""**, su propósito principal es facilitar y automatizar cálculos relacionados con maquinaria industrial, en particular con máquinas tipo **Apstar HGL-924**.
-
-Como actualmente es solo un concepto inicial su uso y comprensión a mi no me resulta ningún inconveniente pero sé que para otras personas sí, por ello trabajaré durante un tiempo en diseñar una amigable interfaz gráfica para su uso por cualquier tipo de operario u oficial que trabaje con este tipo de maquinaria.
+**PrintBoxCalc** es actualmente una app funcional para sistemas Android en su **versión 1.1.0**, su propósito principal es facilitar y automatizar cálculos relacionados con maquinaria industrial, en particular con máquinas tipo **Apstar HGL-924**.
 
 ---
 

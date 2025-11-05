@@ -6,8 +6,9 @@
 
 ### 🛠️ ¿Cómo instalar?
 
-Puedes instalar la app en tu sistema Android descargando solo el archivo [PBC.zip](https://github.com/5kidRo0t/PrintBoxCalc/blob/main/PBC.zip), y una vez descargado
-lo descomprimes con **RAR** por ejemplo, y obtendrás un archivo con la extensión >> **.apk**, simplemente ábrelo e instálalo.
+#### Puedes instalar la app en tu sistema Android descargando solo el archivo [PBC.zip](https://github.com/5kidRo0t/PrintBoxCalc/blob/main/PBC.zip), y una vez descargado lo descomprimes con **RAR** por ejemplo, y obtendrás un archivo con la extensión >> **.apk**, simplemente ábrelo e instálalo. En otras palabras, descarga, descomprime e instala 😊
+
+---
 
 En caso de querer compilar tú mismx la app puedes hacerlo usando **Briefcase** o lo que prefieras, tienes ahí todos los
 recursos para que compiles la app, la modifiques o hagas lo que quieras bajo los términos de la **licencia GPL 3.0**, el código principal lo encontrarás

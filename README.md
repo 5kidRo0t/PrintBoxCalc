@@ -12,10 +12,6 @@
 
 ---
 
-### 🛠️ Descripción del Proyecto
-
-**PrintBoxCalc** es actualmente una app funcional para sistemas Android en su **versión 1.2**, su propósito principal es facilitar y automatizar cálculos relacionados con maquinaria industrial, en particular con máquinas tipo **Apstar HGL-924**.
-
 ## 📱 Ejemplo de la app en funcionamiento
 
 A continuación se muestran dos capturas de la aplicación **PrintBoxCalc** en Android:

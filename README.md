@@ -10,11 +10,16 @@
 
 **En otras palabras > descarga, descomprime e instala 😊**
 
+---
+
+## 📱 Ejemplo de la app en funcionamiento
+
+A continuación se muestran dos capturas de la aplicación **PrintBoxCalc** en Android:
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/55322ca2-85dd-4bc8-b594-93106f4102f9" width="300">
   &nbsp;&nbsp;&nbsp;
-  <img src="https://github.com/user-attachments/assets/7a64a766-251c-4df3-a5a5-d56717f50f2f" width="438">
+  <img src="https://github.com/user-attachments/assets/7a64a766-251c-4df3-a5a5-d56717f50f2f" width="300">
 </p>
 
 

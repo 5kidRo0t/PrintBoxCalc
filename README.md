@@ -12,6 +12,10 @@
 
 ---
 
+### 🛠️ Descripción del Proyecto
+
+**PrintBoxCalc** es actualmente una app funcional para sistemas Android en su **versión 1.2**, su propósito principal es facilitar y automatizar cálculos relacionados con maquinaria industrial, en particular con máquinas tipo **Apstar HGL-924**.
+
 ## 📱 Ejemplo de la app en funcionamiento
 
 A continuación se muestran dos capturas de la aplicación **PrintBoxCalc** en Android:
@@ -22,8 +26,6 @@ A continuación se muestran dos capturas de la aplicación **PrintBoxCalc** en A
   <img src="https://github.com/user-attachments/assets/7a64a766-251c-4df3-a5a5-d56717f50f2f" width="438">
 </p>
 
-
-
 ---
 
 En caso de querer compilar tú mismx la app puedes hacerlo usando **Briefcase** o lo que prefieras, tienes ahí todos los
@@ -31,12 +33,6 @@ recursos para que compiles la app, la modifiques o hagas lo que quieras bajo los
 en **/src/printboxcalc/** con el nombre de **__main__.py**
 
 En esta nueva versión 1.2 he añadido los cálculos del PAP y además un script con el nombre de [auto_compilation.sh](https://github.com/5kidRo0t/PrintBoxCalc/blob/main/auto_compilation.sh) para automatizar todo el proceso de compilación de la app en caso de que la quieras compilar tú, dentro del script encontrarás información sobre lo que necesitas exáctamente para poder compilar la app, recuerda que esto está pensado para sistemas GNU/Linux basados en Debian. Cualquier duda siempre puedes contactarme a > skidoroot@gmail.com < ten en cuenta que puede que tarde en responder.
-
----
-
-### 🛠️ Descripción del Proyecto
-
-**PrintBoxCalc** es actualmente una app funcional para sistemas Android en su **versión 1.2**, su propósito principal es facilitar y automatizar cálculos relacionados con maquinaria industrial, en particular con máquinas tipo **Apstar HGL-924**.
 
 ---
 

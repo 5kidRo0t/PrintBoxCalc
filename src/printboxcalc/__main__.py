@@ -82,7 +82,17 @@ class PrintBoxCalc(toga.App):
             res3 = num3 / 2
             res4 = (num4 / 2) + num3
 
-            resultados = f"Clichés:\n| {res1:.2f} | {res2:.2f} | {res3:.2f} | {res4:.2f} |"
+            papizq1 = (num1 - 35) + num2
+            papizq2 = num2 - 35
+            papizq3 = 35
+            papizq4 = num3 + 35
+
+            papder1 = num2 + 35
+            papder2 = 35
+            papder3 = num3 - 35
+            papder4 = (num4 - 35) + num3
+
+            resultados = f"Clichés:\n| {res1:.2f} | {res2:.2f} | {res3:.2f} | {res4:.2f} |\n\n\nPAP a la izquierda:\n| {papizq1:.2f} | {papizq2:.2f} | {papizq3:.2f} | {papizq4:.2f} |\n\n\nPAP a la derecha:\n| {papder1:.2f} | {papder2:.2f} | {papder3:.2f} | {papder4:.2f} |\n"
             self.result_label.text = resultados
 
         except ValueError:

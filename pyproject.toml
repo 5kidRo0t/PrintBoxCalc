@@ -1,7 +1,7 @@
 [tool.briefcase]
 project_name = "PrintBoxCalc"
 bundle = "com.skidoroot"
-version = "1.1.0"
+version = "1.2"
 license.file = "LICENSE"
 author = "5kidRo0t"
 author_email = "skidoroot@gmail.com"

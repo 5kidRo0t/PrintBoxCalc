@@ -10,6 +10,15 @@
 
 **En otras palabras > descarga, descomprime e instala 😊**
 
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/55322ca2-85dd-4bc8-b594-93106f4102f9" width="300">
+  &nbsp;&nbsp;&nbsp;
+  <img src="https://github.com/user-attachments/assets/7a64a766-251c-4df3-a5a5-d56717f50f2f" width="438">
+</p>
+
+
+
 ---
 
 En caso de querer compilar tú mismx la app puedes hacerlo usando **Briefcase** o lo que prefieras, tienes ahí todos los

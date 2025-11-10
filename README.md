@@ -27,7 +27,7 @@ A continuación se muestran dos capturas de la aplicación **PrintBoxCalc** en A
 
 En caso de querer compilar tú mismx la app puedes hacerlo usando **Briefcase** o lo que prefieras, tienes ahí todos los
 recursos para que compiles la app, la modifiques o hagas lo que quieras bajo los términos de la **licencia GPL 3.0**, el código principal lo encontrarás
-en **/src/printboxcalc/** con el nombre de **__main__.py**
+en **/src/printboxcalc/** con el nombre de **__main__.py** También puedes usar el script [auto_compilation.sh](https://github.com/5kidRo0t/PrintBoxCalc/blob/main/auto_compilation.sh) el cual automatiza todo el proceso de compilado o empaquetado de la app.
 
 En esta nueva versión 1.3 he añadido un botón para poder restablecer los datos introducidos y poder volver a realizar un nuevo cálculo sin la molestia de tener que estar eliminando manualmente cada dato introducido para introducir uno nuevo, además se ha añadido un nuevo resultado llamado "Asas" con el objetivo de facilitar la interpretación de los cálculos y poder aplicarlo cuando sea necesario al troquelado, por último se ha añadido el símbolo "<" o ">" para indicar hacia qué lado se situa la pestaña en relación a los resultados favoreciendo una mejor compresión de estos.
 

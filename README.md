@@ -1,4 +1,4 @@
-<h1 align="center">PrintBoxCalc Ver. 1.2 📦</h1>
+<h1 align="center">PrintBoxCalc Ver. 1.3 📦</h1>
 
 <p align="center">
   <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdTNtZ21obXV1ZW93Mm1zZjQ5ZWFhYmkwcDRqZTh3MnU3aGRnYmNiZiZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/fxq8W3zBO7l0YcAgUQ/giphy.gif" width="350"/>
@@ -14,12 +14,13 @@
 
 ## 📱 Ejemplo de la app en funcionamiento
 
+
 A continuación se muestran dos capturas de la aplicación **PrintBoxCalc** en Android:
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/55322ca2-85dd-4bc8-b594-93106f4102f9" width="300">
+  <img src="https://github.com/user-attachments/assets/6364349e-578b-48c2-8d9a-cf3c01789204" width="410">
   &nbsp;&nbsp;&nbsp;
-  <img src="https://github.com/user-attachments/assets/7a64a766-251c-4df3-a5a5-d56717f50f2f" width="438">
+  <img src="https://github.com/user-attachments/assets/23f83253-076c-4cbd-b7c6-9b0d5c8f545d" width="300">
 </p>
 
 ---
@@ -28,7 +29,7 @@ En caso de querer compilar tú mismx la app puedes hacerlo usando **Briefcase** 
 recursos para que compiles la app, la modifiques o hagas lo que quieras bajo los términos de la **licencia GPL 3.0**, el código principal lo encontrarás
 en **/src/printboxcalc/** con el nombre de **__main__.py**
 
-En esta nueva versión 1.2 he añadido los cálculos del PAP y además un script con el nombre de [auto_compilation.sh](https://github.com/5kidRo0t/PrintBoxCalc/blob/main/auto_compilation.sh) para automatizar todo el proceso de compilación de la app en caso de que la quieras compilar tú, dentro del script encontrarás información sobre lo que necesitas exáctamente para poder compilar la app, recuerda que esto está pensado para sistemas GNU/Linux basados en Debian. Cualquier duda siempre puedes contactarme a > skidoroot@gmail.com < ten en cuenta que puede que tarde en responder.
+En esta nueva versión 1.3 he añadido un botón para poder restablecer los datos introducidos y poder volver a realizar un nuevo cálculo sin la molestia de tener que estar eliminando manualmente cada dato introducido para introducir uno nuevo, además se ha añadido un nuevo resultado llamado "Asas" con el objetivo de facilitar la interpretación de los cálculos y poder aplicarlo cuando sea necesario al troquelado, por último se ha añadido el símbolo "<" o ">" para indicar hacia qué lado se situa la pestaña en relación a los resultados favoreciendo una mejor compresión de estos.
 
 ---
 

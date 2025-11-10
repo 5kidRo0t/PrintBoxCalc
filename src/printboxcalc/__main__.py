@@ -54,7 +54,7 @@ class PrintBoxCalc(toga.App):
         calc_button = toga.Button(
             'Calcular',
             on_press=self.calcular,
-            style=Pack(padding=10)
+            style=Pack(padding=10, background_color="#dcdcdc")
         )
 
         self.result_label = toga.Label(
@@ -62,7 +62,13 @@ class PrintBoxCalc(toga.App):
             style=Pack(padding=10, font_size=15, font_weight='bold', color='black')
         )
 
-        for fila in [fila1, fila2, fila3, fila4, calc_button, self.result_label]:
+        reset_button = toga.Button(
+            'Restablecer',
+            on_press=self.resetear,
+            style=Pack(padding=10, background_color="#ffcccc")
+        )
+
+        for fila in [fila1, fila2, fila3, fila4, calc_button, self.result_label, reset_button]:
             main_box.add(fila)
 
         self.main_window = toga.MainWindow(title=self.formal_name)
@@ -70,7 +76,6 @@ class PrintBoxCalc(toga.App):
         self.main_window.show()
 
     def calcular(self, widget):
-        """Calcula los resultados de clichés y los muestra en pantalla."""
         try:
             num1 = float(self.num1.value)
             num2 = float(self.num2.value)
@@ -92,11 +97,27 @@ class PrintBoxCalc(toga.App):
             papder3 = num3 - 35
             papder4 = (num4 - 35) + num3
 
-            resultados = f"Clichés:\n| {res1:.2f} | {res2:.2f} | {res3:.2f} | {res4:.2f} |\n\n\nPAP a la izquierda:\n| {papizq1:.2f} | {papizq2:.2f} | {papizq3:.2f} | {papizq4:.2f} |\n\n\nPAP a la derecha:\n| {papder1:.2f} | {papder2:.2f} | {papder3:.2f} | {papder4:.2f} |\n"
+            resultados = (
+                f"Clichés:\n<| {res1:.2f} | {res2:.2f} | {res3:.2f} | {res4:.2f} |\n\n"
+                f"PAP a la izquierda:\n<| {papizq1:.2f} | {papizq2:.2f} | {papizq3:.2f} | {papizq4:.2f} |\n\n"
+                f"PAP a la derecha:\n<| {papder1:.2f} | {papder2:.2f} | {papder3:.2f} | {papder4:.2f} |\n\n"
+                f"Asas:\n | {res4:.2f} | {res3:.2f} | {res2:.2f} | {res1:.2f} |>\n"
+            )
             self.result_label.text = resultados
 
-        except ValueError:
+        except (ValueError, TypeError):
             self.result_label.text = "⚠️ Introduce solo números válidos."
+
+    def resetear(self, widget):
+        """Restaura los campos y el resultado sin cerrar la app."""
+        try:
+            self.num1.value = ""
+            self.num2.value = ""
+            self.num3.value = ""
+            self.num4.value = ""
+            self.result_label.text = "Resultados:"
+        except Exception as e:
+            print("Error al restablecer:", e)
 
 
 def main():
@@ -105,4 +126,3 @@ def main():
 
 if __name__ == "__main__":
     main().main_loop()
-

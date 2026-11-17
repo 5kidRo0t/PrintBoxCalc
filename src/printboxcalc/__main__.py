@@ -161,6 +161,8 @@ class PrintBoxCalc(toga.App):
         self.eliminar_calcular()
 
     async def resetear(self, widget):
+        if self.estado_anterior is not None:
+            return
         dialog = toga.QuestionDialog(
             "Confirmar restablecimiento",
             "¿Seguro que quieres restablecer los datos?"

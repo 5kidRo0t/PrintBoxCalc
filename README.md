@@ -4,7 +4,7 @@
   <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdTNtZ21obXV1ZW93Mm1zZjQ5ZWFhYmkwcDRqZTh3MnU3aGRnYmNiZiZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/fxq8W3zBO7l0YcAgUQ/giphy.gif" width="350"/>
 </p>
 
-**### 🛠️ ¿Cómo instalar?**
+### 🛠️ ¿Cómo instalar?
 
 **Puedes instalar la app en tu sistema Android descargando únicamente el archivo [PBC.zip](https://github.com/5kidRo0t/PrintBoxCalc/blob/main/PBC.zip). Una vez descargado, descomprímelo con RAR, por ejemplo, y obtendrás un archivo con extensión `.apk`. Simplemente ábrelo e instálalo.**
 

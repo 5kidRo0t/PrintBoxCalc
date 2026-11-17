@@ -20,6 +20,21 @@ from toga.style.pack import COLUMN, ROW
 
 
 class PrintBoxCalc(toga.App):
+
+    def eliminar_calcular(self):
+        if self.calc_button is not None:
+            self.main_box.remove(self.calc_button)
+            self.calc_button = None
+
+    def crear_calcular(self):
+        if self.calc_button is None:
+            self.calc_button = toga.Button(
+                'Calcular',
+                on_press=self.calcular,
+                style=Pack(padding=10, background_color="#dcdcdc")
+            )
+            self.main_box.insert(4, self.calc_button)
+
     def startup(self):
 
         self.estado_anterior = None
@@ -55,7 +70,7 @@ class PrintBoxCalc(toga.App):
         self.num4 = toga.NumberInput(style=Pack(flex=1))
         fila4.add(self.num4)
 
-        calc_button = toga.Button(
+        self.calc_button = toga.Button(
             'Calcular',
             on_press=self.calcular,
             style=Pack(padding=10, background_color="#dcdcdc")
@@ -77,7 +92,7 @@ class PrintBoxCalc(toga.App):
             fila2,
             fila3,
             fila4,
-            calc_button,
+            self.calc_button,
             self.result_label,
             reset_button
         ]:
@@ -143,6 +158,7 @@ class PrintBoxCalc(toga.App):
         )
 
         self.result_label.text = resultados
+        self.eliminar_calcular()
 
     async def resetear(self, widget):
         dialog = toga.QuestionDialog(
@@ -153,6 +169,7 @@ class PrintBoxCalc(toga.App):
         confirmado = await self.main_window.dialog(dialog)
 
         if confirmado:
+            self.crear_calcular()
             if (
                 self.result_label.text != "Resultados:"
                 and not self.result_label.text.startswith("⚠️")
@@ -200,6 +217,7 @@ class PrintBoxCalc(toga.App):
 
     def volver(self, widget):
         if self.estado_anterior is not None:
+            self.eliminar_calcular()
             self.num1.value = self.estado_anterior["num1"]
             self.num2.value = self.estado_anterior["num2"]
             self.num3.value = self.estado_anterior["num3"]

@@ -1,10 +1,10 @@
-<h1 align="center">PrintBoxCalc Ver. 2.0 📦</h1>
+\<h1 align="center">PrintBoxCalc Ver. 3.0 📦\</h1>
 
-<p align="center">
-  <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdTNtZ21obXV1ZW93Mm1zZjQ5ZWFhYmkwcDRqZTh3MnU3aGRnYmNiZiZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/fxq8W3zBO7l0YcAgUQ/giphy.gif" width="350"/>
-</p>
+\<p align="center">
+&#x20; \<img src="[https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdTNtZ21obXV1ZW93Mm1zZjQ5ZWFhYmkwcDRqZTh3MnU3aGRnYmNiZiZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/fxq8W3zBO7l0YcAgUQ/giphy.gif](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdTNtZ21obXV1ZW93Mm1zZjQ5ZWFhYmkwcDRqZTh3MnU3aGRnYmNiZiZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/fxq8W3zBO7l0YcAgUQ/giphy.gif)" width="350"/>
+\</p>
 
-### 🛠️ ¿Cómo instalar?
+**### 🛠️ ¿Cómo instalar?**
 
 **Puedes instalar la app en tu sistema Android descargando únicamente el archivo [PBC.zip](https://github.com/5kidRo0t/PrintBoxCalc/blob/main/PBC.zip). Una vez descargado, descomprímelo con RAR, por ejemplo, y obtendrás un archivo con extensión `.apk`. Simplemente ábrelo e instálalo.**
 
@@ -12,15 +12,15 @@
 
 ---
 
-## 📱 Ejemplo de la app en funcionamiento
+**## 📱 Ejemplo de la app en funcionamiento**
 
 A continuación se muestran dos capturas de la aplicación **PrintBoxCalc** en Android:
 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/6364349e-578b-48c2-8d9a-cf3c01789204" width="410">
-  &nbsp;&nbsp;&nbsp;
-  <img src="https://github.com/user-attachments/assets/23f83253-076c-4cbd-b7c6-9b0d5c8f545d" width="300">
-</p>
+\<p align="center">
+&#x20; \<img src="[https://github.com/user-attachments/assets/6364349e-578b-48c2-8d9a-cf3c01789204](https://github.com/user-attachments/assets/6364349e-578b-48c2-8d9a-cf3c01789204)" width="410">
+&#x20; &nbsp;&nbsp;&nbsp;
+&#x20; \<img src="[https://github.com/user-attachments/assets/23f83253-076c-4cbd-b7c6-9b0d5c8f545d](https://github.com/user-attachments/assets/23f83253-076c-4cbd-b7c6-9b0d5c8f545d)" width="300">
+\</p>
 
 ---
 
@@ -32,19 +32,20 @@ También puedes utilizar el script [auto_compilation.sh](https://github.com/5kid
 
 ---
 
-## 🆕 Novedades de la versión 2.0
+**## 🆕 Novedades de la versión 3.0**
 
-En esta nueva versión he incorporado varias mejoras orientadas a aumentar la seguridad y facilitar el uso de la aplicación:
+En esta nueva versión he incorporado una nueva modalidad de cálculo y mejoras en la interfaz de usuario:
 
-- **Confirmación de cálculo:** ahora, antes de realizar un cálculo, la aplicación muestra los cuatro valores introducidos y solicita confirmación para evitar cálculos con datos incorrectos.
-- **Confirmación de restablecimiento:** antes de borrar los datos introducidos, la aplicación solicita confirmación para evitar eliminaciones accidentales.
-- **Botón «Volver»:** se ha añadido una función de recuperación que permite restaurar los últimos datos y resultados calculados en caso de haberlos restablecido accidentalmente. Una vez recuperados, el botón desaparece automáticamente.
+- **Nueva modalidad «Ancho»:** ahora es posible realizar cálculos tanto de Largo como del Ancho, ampliando las posibilidades de uso de la aplicación.
+- **Selector de modalidades:** se han incorporado dos botones independientes para alternar entre los modos Largo y Ancho.
+- **Identificación visual:** el botón correspondiente a la modalidad seleccionada cambia de color de fondo, permitiendo identificar fácilmente qué entorno de cálculo está activo.
+- **Entornos independientes:** cada modalidad dispone de su propio espacio de trabajo, manteniendo separados sus datos y resultados.
 
-Estas mejoras buscan reducir errores durante el uso de la aplicación y ofrecer una mayor seguridad al trabajar con los cálculos.
+Estas mejoras amplían la funcionalidad de PrintBoxCalc y facilitan el uso de ambas modalidades desde una misma aplicación, manteniendo la sencillez de su interfaz.
 
 ---
 
-## 📜 Licencia y Filosofía
+**## 📜 Licencia y Filosofía**
 
 Este software —tanto su versión inicial como todas sus futuras iteraciones— está licenciado bajo la **GNU GPL v3.0**, lo cual garantiza que:
 

@@ -35,12 +35,34 @@ class PrintBoxCalc(toga.App):
             )
             self.main_box.insert(4, self.calc_button)
 
+    def eliminar_calcular_ancho(self):
+        if self.calc_ancho_button is not None:
+            self.ancho_box.remove(self.calc_ancho_button)
+            self.calc_ancho_button = None
+
+    def crear_calcular_ancho(self):
+        if self.calc_ancho_button is None:
+            self.calc_ancho_button = toga.Button(
+                'Calcular',
+                on_press=self.calcular_ancho,
+                style=Pack(padding=10, background_color="#dcdcdc")
+            )
+            self.ancho_box.insert(2, self.calc_ancho_button)
+
     def startup(self):
 
         self.estado_anterior = None
         self.undo_button = None
+
+        self.estado_anterior_ancho = None
+        self.undo_button_ancho = None
+
         main_box = toga.Box(style=Pack(direction=COLUMN, padding=10, flex=1))
         self.main_box = main_box
+
+        self.ancho_box = toga.Box(
+            style=Pack(direction=COLUMN, padding=10, flex=1)
+        )
 
         label_style = Pack(
             width=100,
@@ -98,9 +120,91 @@ class PrintBoxCalc(toga.App):
         ]:
             main_box.add(fila)
 
+        ancho_fila1 = toga.Box(style=Pack(direction=ROW, padding=5))
+        ancho_fila1.add(toga.Label('Ancho 1:', style=label_style))
+        self.ancho_num1 = toga.NumberInput(style=Pack(flex=1))
+        ancho_fila1.add(self.ancho_num1)
+
+        ancho_fila2 = toga.Box(style=Pack(direction=ROW, padding=5))
+        ancho_fila2.add(toga.Label('Ancho 2:', style=label_style))
+        self.ancho_num2 = toga.NumberInput(style=Pack(flex=1))
+        ancho_fila2.add(self.ancho_num2)
+
+        self.calc_ancho_button = toga.Button(
+            'Calcular',
+            on_press=self.calcular_ancho,
+            style=Pack(padding=10, background_color="#dcdcdc")
+        )
+
+        self.ancho_result_label = toga.Label(
+            'Resultados:',
+            style=Pack(padding=10, font_size=15, font_weight='bold', color='black')
+        )
+
+        ancho_reset_button = toga.Button(
+            'Restablecer',
+            on_press=self.resetear_ancho,
+            style=Pack(padding=10, background_color="#ffcccc")
+        )
+
+        for fila in [
+            ancho_fila1,
+            ancho_fila2,
+            self.calc_ancho_button,
+            self.ancho_result_label,
+            ancho_reset_button
+        ]:
+            self.ancho_box.add(fila)
+
+        self.largo_button = toga.Button(
+            'LARGO',
+            on_press=self.mostrar_largo,
+            style=Pack(flex=1, padding=5, background_color="#9C27B0", color="#FFFFFF")
+        )
+
+        self.ancho_button = toga.Button(
+            'ANCHO',
+            on_press=self.mostrar_ancho,
+            style=Pack(flex=1, padding=5, background_color="#dcdcdc", color="#333333")
+        )
+
+        selector_box = toga.Box(style=Pack(direction=ROW, padding=5))
+        selector_box.add(self.largo_button)
+        selector_box.add(self.ancho_button)
+
+        self.content_box = toga.Box(style=Pack(direction=COLUMN, flex=1))
+        self.content_box.add(self.main_box)
+        self.modo_actual = "largo"
+
+        root_box = toga.Box(style=Pack(direction=COLUMN, flex=1))
+        root_box.add(selector_box)
+        root_box.add(self.content_box)
+
         self.main_window = toga.MainWindow(title=self.formal_name)
-        self.main_window.content = main_box
+        self.main_window.content = root_box
         self.main_window.show()
+
+    def mostrar_largo(self, widget):
+        if self.modo_actual != "largo":
+            self.content_box.remove(self.ancho_box)
+            self.content_box.add(self.main_box)
+            self.modo_actual = "largo"
+
+            self.largo_button.style.background_color = "#9C27B0"
+            self.ancho_button.style.background_color = "#dcdcdc"
+            self.largo_button.style.color = "#FFFFFF"
+            self.ancho_button.style.color = "#333333"
+
+    def mostrar_ancho(self, widget):
+        if self.modo_actual != "ancho":
+            self.content_box.remove(self.main_box)
+            self.content_box.add(self.ancho_box)
+            self.modo_actual = "ancho"
+
+            self.largo_button.style.background_color = "#dcdcdc"
+            self.ancho_button.style.background_color = "#9C27B0"
+            self.largo_button.style.color = "#333333"
+            self.ancho_button.style.color = "#FFFFFF"
 
     async def calcular(self, widget):
         try:
@@ -160,9 +264,56 @@ class PrintBoxCalc(toga.App):
         self.result_label.text = resultados
         self.eliminar_calcular()
 
+    async def calcular_ancho(self, widget):
+        try:
+            num1 = float(self.ancho_num1.value)
+            num2 = float(self.ancho_num2.value)
+
+            mensaje = "¿Los datos introducidos son correctos?"
+
+            dialog = toga.QuestionDialog(
+                f"Confirmar Datos\n"
+                f"{num1} | {num2}\n",
+                mensaje
+            )
+
+            confirmado = await self.main_window.dialog(dialog)
+
+            if confirmado:
+                self.ejecutar_calculo_ancho(num1, num2)
+            else:
+                self.resetcalc_ancho(None)
+
+        except (ValueError, TypeError):
+            self.ancho_result_label.text = "⚠️ Introduce solo números válidos."
+
+    def ejecutar_calculo_ancho(self, num1, num2):
+
+        self.estado_anterior_ancho = None
+
+        if self.undo_button_ancho is not None:
+            self.ancho_box.remove(self.undo_button_ancho)
+            self.undo_button_ancho = None
+
+        solapa = num1 + num2
+        medio = (num1 / 2) + (num2 / 2)
+        pap = (num1 / 2) + (num2 - 35)
+        puntos = (num1 / 2) + ((num2 / 2) - 73)
+
+        resultados = (
+            f"Solapa:\n<| {solapa:.2f} |\n\n"
+            f"Medio:\n<| {medio:.2f} |\n\n"
+            f"PAP:\n<| {pap:.2f} |\n\n"
+            f"Puntos:\n<| {puntos:.2f} |\n"
+        )
+
+        self.ancho_result_label.text = resultados
+        self.eliminar_calcular_ancho()
+
     async def resetear(self, widget):
         if self.estado_anterior is not None:
             return
+
         dialog = toga.QuestionDialog(
             "Confirmar restablecimiento",
             "¿Seguro que quieres restablecer los datos?"
@@ -172,6 +323,7 @@ class PrintBoxCalc(toga.App):
 
         if confirmado:
             self.crear_calcular()
+
             if (
                 self.result_label.text != "Resultados:"
                 and not self.result_label.text.startswith("⚠️")
@@ -207,6 +359,53 @@ class PrintBoxCalc(toga.App):
             self.num3.value = ""
             self.num4.value = ""
             self.result_label.text = "Resultados:"
+
+    async def resetear_ancho(self, widget):
+        if self.estado_anterior_ancho is not None:
+            return
+
+        dialog = toga.QuestionDialog(
+            "Confirmar restablecimiento",
+            "¿Seguro que quieres restablecer los datos?"
+        )
+
+        confirmado = await self.main_window.dialog(dialog)
+
+        if confirmado:
+            self.crear_calcular_ancho()
+
+            if (
+                self.ancho_result_label.text != "Resultados:"
+                and not self.ancho_result_label.text.startswith("⚠️")
+            ):
+                self.estado_anterior_ancho = {
+                    "num1": self.ancho_num1.value,
+                    "num2": self.ancho_num2.value,
+                    "resultados": self.ancho_result_label.text
+                }
+
+                if self.undo_button_ancho is None:
+                    self.undo_button_ancho = toga.Button(
+                        'Volver',
+                        on_press=self.volver_ancho,
+                        style=Pack(
+                            padding=10,
+                            background_color="#dcdcdc"
+                        )
+                    )
+                    self.ancho_box.add(self.undo_button_ancho)
+
+            else:
+                self.estado_anterior_ancho = None
+
+                if self.undo_button_ancho is not None:
+                    self.ancho_box.remove(self.undo_button_ancho)
+                    self.undo_button_ancho = None
+
+            self.ancho_num1.value = ""
+            self.ancho_num2.value = ""
+            self.ancho_result_label.text = "Resultados:"
+
     def resetcalc(self, widget):
         try:
             self.num1.value = ""
@@ -217,9 +416,18 @@ class PrintBoxCalc(toga.App):
         except Exception as e:
             print("Error al restablecer:", e)
 
+    def resetcalc_ancho(self, widget):
+        try:
+            self.ancho_num1.value = ""
+            self.ancho_num2.value = ""
+            self.ancho_result_label.text = "Resultados:"
+        except Exception as e:
+            print("Error al restablecer:", e)
+
     def volver(self, widget):
         if self.estado_anterior is not None:
             self.eliminar_calcular()
+
             self.num1.value = self.estado_anterior["num1"]
             self.num2.value = self.estado_anterior["num2"]
             self.num3.value = self.estado_anterior["num3"]
@@ -230,6 +438,19 @@ class PrintBoxCalc(toga.App):
 
             self.main_box.remove(self.undo_button)
             self.undo_button = None
+
+    def volver_ancho(self, widget):
+        if self.estado_anterior_ancho is not None:
+            self.eliminar_calcular_ancho()
+
+            self.ancho_num1.value = self.estado_anterior_ancho["num1"]
+            self.ancho_num2.value = self.estado_anterior_ancho["num2"]
+            self.ancho_result_label.text = self.estado_anterior_ancho["resultados"]
+
+            self.estado_anterior_ancho = None
+
+            self.ancho_box.remove(self.undo_button_ancho)
+            self.undo_button_ancho = None
 
 
 def main():

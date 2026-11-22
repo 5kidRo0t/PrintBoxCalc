@@ -28,17 +28,13 @@ También puedes utilizar el script [auto_compilation.sh](https://github.com/5kid
 
 ## 🆕 Novedades de la versión 3.0
 
-En esta nueva versión he incorporado una nueva modalidad de cálculo y mejoras en la interfaz de usuario:
+**En esta nueva versión he incorporado una nueva modalidad de cálculo y mejoras en la interfaz de usuario:**
 
-Nueva modalidad «Ancho»: ahora es posible realizar cálculos tanto de Largo como del Ancho, ampliando las posibilidades de uso de la aplicación.
+**Nueva modalidad "Ancho"** >> 
 
-Selector de modalidades: se han incorporado dos botones independientes para alternar entre los modos Largo y Ancho.
+Ahora es posible realizar cálculos tanto de Largo como del Ancho, ampliando las posibilidades de uso de la aplicación. Se han incorporado dos botones independientes para alternar entre los modos Largo y Ancho, cada modalidad dispone de su propio espacio de trabajo, manteniendo separados sus datos y resultados.
 
-Identificación visual: el botón correspondiente a la modalidad seleccionada cambia de color de fondo, permitiendo identificar fácilmente qué entorno de cálculo está activo.
-
-Entornos independientes: cada modalidad dispone de su propio espacio de trabajo, manteniendo separados sus datos y resultados.
-
-Estas mejoras amplían la funcionalidad de PrintBoxCalc y facilitan el uso de ambas modalidades desde una misma aplicación, manteniendo la sencillez de su interfaz.
+Estas mejoras amplían la funcionalidad de PrintBoxCalc y facilitan el uso de ambas modalidades desde una misma aplicación.
 
 ## 📜 Licencia y Filosofía
 

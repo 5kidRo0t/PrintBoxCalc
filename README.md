@@ -15,9 +15,9 @@ En otras palabras > descarga, descomprime e instala 😊
 A continuación se muestran dos capturas de la aplicación PrintBoxCalc en Android:
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/6364349e-578b-48c2-8d9a-cf3c01789204" width="410">
+  <img src="https://github.com/user-attachments/assets/aacd89c5-ed99-4d8e-8098-27a61fc0e1d5" width="300">
   &nbsp;&nbsp;&nbsp;
-  <img src="https://github.com/user-attachments/assets/23f83253-076c-4cbd-b7c6-9b0d5c8f545d" width="300">
+  <img src="https://github.com/user-attachments/assets/3c0939f2-a1aa-4636-b5fa-7c5ed1abbb56" width="300">
 </p>
 
 En caso de querer compilar tú mismx la aplicación, puedes hacerlo usando Briefcase o la herramienta que prefieras. Tienes a tu disposición todos los recursos necesarios para compilarla, modificarla o hacer lo que quieras bajo los términos de la licencia GPL 3.0.

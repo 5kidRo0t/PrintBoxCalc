@@ -6,7 +6,7 @@
 
 ### 🛠️ ¿Cómo instalar?
 
-Puedes instalar la app en tu sistema Android descargando únicamente el archivo PBC.zip. Una vez descargado, descomprímelo con RAR, por ejemplo, y obtendrás un archivo con extensión .apk. Simplemente ábrelo e instálalo.
+Puedes instalar la app en tu sistema Android descargando únicamente el archivo [PBC.zip](https://github.com/5kidRo0t/PrintBoxCalc/blob/main/PBC.zip). Una vez descargado, descomprímelo con RAR, por ejemplo, y obtendrás un archivo con extensión .apk. Simplemente ábrelo e instálalo.
 
 En otras palabras > descarga, descomprime e instala 😊
 
@@ -24,7 +24,7 @@ En caso de querer compilar tú mismx la aplicación, puedes hacerlo usando Brief
 
 El código principal se encuentra en /src/printboxcalc/, concretamente en el archivo __main__.py.
 
-También puedes utilizar el script auto_compilation.sh, que automatiza todo el proceso de compilación o empaquetado de la aplicación.
+También puedes utilizar el script [auto_compilation.sh](https://github.com/5kidRo0t/PrintBoxCalc/blob/main/auto_compilation.sh), que automatiza todo el proceso de compilación o empaquetado de la aplicación.
 
 ## 🆕 Novedades de la versión 3.0
 
@@ -42,7 +42,7 @@ Estas mejoras amplían la funcionalidad de PrintBoxCalc y facilitan el uso de am
 
 ## 📜 Licencia y Filosofía
 
-Este software —tanto su versión inicial como todas sus futuras iteraciones— está licenciado bajo la GNU GPL v3.0, lo cual garantiza que:
+Este software tanto su versión inicial como todas sus futuras iteraciones está licenciado bajo la GNU GPL v3.0, lo cual garantiza que:
 
 El código permanecerá libre y accesible para todos.
 
